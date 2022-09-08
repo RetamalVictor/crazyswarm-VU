@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+
+  <rosparam command="load" file="$(find crazyswarm)/launch/crazyflieTypes.yaml" />
+  <rosparam command="load" file="$(find crazyswarm)/launch/crazyflies.yaml" />
+
+  <node pkg="crazyswarm" type="crazyswarm_server" name="crazyswarm_server" output="screen" >
+    <rosparam>
+      world_frame: "/world"
+      # Logging configuration (Use enable_logging to actually enable logging)
+      genericLogTopics: ["log1"]
+      genericLogTopicFrequencies: [50]
+      genericLogTopic_log1_Variables: ["stateEstimate.x", "stateEstimate.y","stateEstimate.z"]
+      # firmware parameters for all drones (use crazyflieTypes.yaml to set per type, or
+      # allCrazyflies.yaml to set per drone)
+      firmwareParams:
+        commander:
+          enHighLevel: 1
+        kalman:
+          resetEstimation: 1
+      # tracking
+      motion_capture_type: "none" # one of none,vicon,optitrack,qualisys,vrpn
+      object_tracking_type: "libobjecttracker" # one of motionCapture,libobjecttracker
+      send_position_only: False # set to False to send position+orientation; set to True to send position only
+      vicon_host_name: "vicon"
+      save_point_clouds: ~/pointCloud.ot
+      print_latency: False
+      write_csvs: False
+      force_no_cache: False
+      enable_parameters: True
+      enable_logging: True
+    </rosparam>
+  </node>
+<!-- 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find crazyswarm)/launch/test.rviz"/>  
+
+  <include file="$(find crazyflie_description)/launch/crazyflie2_rviz.launch" />
+ -->
+
+  <!-- <node pkg="rqt_plot" type="rqt_plot" name="rqt_plot_x" args="/cf2/log1/values[0]"/> -->
+  <!-- <node pkg="rqt_plot" type="rqt_plot" name="rqt_plot_roll" args="/cf1/log1/values[2] /cf1/log1/values[3]"/> -->
+
+</launch>
