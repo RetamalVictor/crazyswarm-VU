@@ -5,9 +5,15 @@ import numpy as np
 import scipy.io as sio
 import matplotlib.pyplot as plt
 import time
+import os
+from datetime import datetime
+
+output_folder = 'crazyswarm-VU/ros_ws/src/crazyswarm/scripts/results'
+filename = os.path.join(output_folder, 'save-' + datetime.now().strftime("%m.%d.%Y_%H.%M.%S"))
+if not os.path.exists(filename):
+    os.makedirs(filename+'/')
 
 num_cf = 6
-
 
 def cf_2_cb(pos_log_msg):
     global positions
@@ -130,6 +136,6 @@ while (not rospy.is_shutdown()) and (not if_terminate):
 
     r.sleep()
 
-sio.savemat('/home/tugay/icra_results/log_x.mat', {'x':log_x})
-sio.savemat('/home/tugay/icra_results/log_y.mat', {'y':log_y})
-sio.savemat('/home/tugay/icra_results/log_h.mat', {'h':log_h})
+sio.savemat(filename + '/log_x.mat', {'x':log_x})
+sio.savemat(filename + '/log_y.mat', {'y':log_y})
+sio.savemat(filename + '/log_h.mat', {'h':log_h})
