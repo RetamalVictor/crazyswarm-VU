@@ -36,7 +36,7 @@ Make sure the terminals are sourced. ```$ source ./crazyswarm-VU/ros_ws/devel/se
 | 3 0       | /flock_no_heading_align | The Swarm will flock without heading alignment.                                                         |
 | 3 1       | /flock_heading_align    | The Swarm will flock with heading alingment.                                                            |
 | 4         | /gradient_following     | The Swarm will find the max point of a gradient surface.                                                |
-| 5 <x> <y> | /go_to                  | The Swarm will go to the specified point (<x>,<y>).                                                     |
+| 5 x y     | /go_to                  | The Swarm will go to the specified point (x,y).                                                         |
 | 6         | /circle_formation       | The Swarm will maintain a circle formation around the point (2.5,2.5) in the global positioning system. |
 | 7         | /reverse_circle         | The Agents of the swarm will exchange the positions in the circle formation by 180.                     |
 
