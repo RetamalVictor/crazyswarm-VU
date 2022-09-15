@@ -3,7 +3,17 @@
 [![Documentation Status](https://readthedocs.org/projects/crazyswarm/badge/?version=latest)](https://crazyswarm.readthedocs.io/en/latest/?badge=latest)
 
 # Crazyswarm
+## *Onboard Controller Design for Nano UAV Swarm in Operator-Guided Collective Behaviours *
 A Large Nano-Quadcopter Swarm.
+
+Please, follow the oficial crazyswarm installation and connection to crazyflies. 
+Modified files for the paper are included in ```crazyswarm-VU/ros_ws/src/crazyswarm/scripts``` and  ```crazyswarm-VU/ros_ws/src/crazyswarm/launch```.
+The files included are:
+- ```Tugay_hover.launch``` including the launch parameters and the initialization of logging functionality.
+- ```icra_play_log.py``` file is used to replay experiments with the logged data. It will generate a dynamic animation to visualize current positions and trayectories during the experiment.
+- ```pos_fb_icra_newplot.py``` extracts the real crazflie positions from the ros topics. It also visualizes the position in real time with a dynamic animation. 
+- ```set_param.py``` is the main mission control script. It allows the operator to initiate, terminate and set different missions in real time during the flight.
+- ```terminate_fb.py``` script to terminate the connection.
 
 The documentation is available here: http://crazyswarm.readthedocs.io/en/latest/.
 
