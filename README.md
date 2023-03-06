@@ -1,11 +1,10 @@
 ![Crazyswarm ROS CI](https://github.com/USC-ACTLab/crazyswarm/workflows/Crazyswarm%20ROS%20CI/badge.svg)
 ![Sim-Only Conda CI](https://github.com/USC-ACTLab/crazyswarm/workflows/Sim-Only%20Conda%20CI/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/crazyswarm/badge/?version=latest)](https://crazyswarm.readthedocs.io/en/latest/?badge=latest)
-[Flight videos of the experiments can be found on this link](https://www.youtube.com/watch?v=RA3ePt5Dhoo)
-
 
 # Crazyswarm
 ## *Onboard Controller Design for Nano UAV Swarm in Operator-Guided Collective Behaviours* 
+[Flight videos of the experiments can be found on this link](https://www.youtube.com/watch?v=RA3ePt5Dhoo)
 A Large Nano-Quadcopter Swarm.
 
 Please, follow the oficial crazyswarm installation and connection to crazyflies. 
