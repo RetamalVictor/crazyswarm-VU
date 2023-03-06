@@ -5,8 +5,8 @@
 # Crazyswarm
 ## *Onboard Controller Design for Nano UAV Swarm in Operator-Guided Collective Behaviours* 
 [Flight videos of the experiments can be found on this link](https://www.youtube.com/watch?v=RA3ePt5Dhoo)
-A Large Nano-Quadcopter Swarm.
 
+A Large Nano-Quadcopter Swarm.
 Please, follow the oficial crazyswarm installation and connection to crazyflies. 
 Modified files for the paper are included in ```crazyswarm-VU/ros_ws/src/crazyswarm/scripts``` and  ```crazyswarm-VU/ros_ws/src/crazyswarm/launch```.
 The files included are:
